@@ -6,19 +6,20 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --green-dark:  #1a3a2a;
-  --green-mid:   #2d6a4f;
-  --green-light: #52b788;
-  --green-pale:  #d8f3dc;
-  --earth:       #8b5e3c;
-  --earth-light: #c9a87c;
+  /* Paleta oficial Parqui Paisagismo & Arquitetura */
+  --green-dark:  #3a4233;  /* verde oliva escuro – fundo principal */
+  --green-mid:   #c8a255;  /* dourado – cor de destaque/CTA */
+  --green-light: #d4b574;  /* dourado claro – hover */
+  --green-pale:  #f5eed5;  /* creme claro */
+  --earth:       #8a6430;
+  --earth-light: #b89050;
   --white:       #ffffff;
-  --off-white:   #f8faf7;
-  --gray-100:    #f1f3f0;
-  --gray-300:    #d4d9d2;
-  --gray-500:    #7a8878;
-  --gray-800:    #2c2f2b;
-  --text:        #1e2b1c;
+  --off-white:   #fdfae8;  /* creme da marca */
+  --gray-100:    #f5f2ea;
+  --gray-300:    #d8d0c0;
+  --gray-500:    #7a7060;
+  --gray-800:    #2c2820;
+  --text:        #2d3220;
 
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans:  'Inter', system-ui, sans-serif;
@@ -143,15 +144,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .logo {
   display: flex;
   align-items: center;
-  gap: .5rem;
-  color: var(--white);
-  font-size: 1.1rem;
-  font-weight: 400;
   flex-shrink: 0;
 }
-.logo__icon { font-size: 1.4rem; }
-.logo__text strong { font-weight: 700; }
-.logo--light .logo__text { color: var(--green-pale); }
+.logo__img {
+  height: 52px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+.header.scrolled .logo__img { height: 44px; transition: height var(--transition); }
 
 .nav { margin-left: auto; }
 .nav__list {
@@ -670,8 +671,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: var(--green-light);
-  box-shadow: 0 0 0 3px rgba(82,183,136,.15);
+  border-color: var(--green-mid);
+  box-shadow: 0 0 0 3px rgba(200,162,85,.15);
 }
 .form-group textarea { resize: vertical; }
 .form-notice {
